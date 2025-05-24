@@ -1,7 +1,4 @@
 #include <stdint.h>
-#include <linux/list.h>
-#include <linux/wait.h>
-
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,7 +22,7 @@ typedef struct {
 Task schedule[MAX_TASKS];
 time_t start_time_global;
 
-// تابع gettid برای گرفتن thread id
+// گرفتن thread id
 pid_t gettid() {
     return syscall(SYS_gettid);
 }
